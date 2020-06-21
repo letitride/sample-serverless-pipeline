@@ -14,7 +14,7 @@ $ aws iam put-role-policy \
 --policy-document file://permission.json
 ```
 
-
+codepipeline用role & policy
 ```
 $ aws iam create-role --role-name code-pipeline-role --assume-role-policy-document file://codepipeline-role.json
 ```
@@ -25,6 +25,7 @@ $ aws iam put-role-policy \
 --policy-document file://codepipeline-permission.json
 ```
 
+codebuilf用role & policy
 ```
 $ aws iam create-role --role-name codebuild-role --assume-role-policy-document file://codebuild-role.json
 ```
