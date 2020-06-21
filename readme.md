@@ -35,3 +35,20 @@ $ aws iam put-role-policy \
 --policy-name codebuild-service \
 --policy-document file://codebuild-permission.json
 ```
+
+codebuild projectの作成
+```
+$ aws codebuild create-project --cli-input-json file://project.json
+```
+
+codepipelineの作成
+```
+$ aws codepipeline create-pipeline --cli-input-json file://pipeline.json
+```
+
+pipelineの実行
+```
+$ aws codepipeline start-pipeline-execution --name serverless-pipeline
+
+$ aws codepipeline get-pipeline-state --name serverless-pipeline
+```
